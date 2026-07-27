@@ -1,10 +1,12 @@
-18+ MULTI‑PRODUCT BOT – COLOURED START + VIDEO/PHOTO/LINK DEMO
-Author: Bread (co‑founder of Sonion)
+"""
+18+ MULTI-PRODUCT BOT - COLOURED START + VIDEO/PHOTO/LINK DEMO
+Author: Bread (co-founder of Sonion)
 """
 
 import os
 import re
 import asyncio
+...
 import sqlite3
 import json
 import random
