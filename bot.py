@@ -1164,7 +1164,3 @@ async def user_payment_handler(event):
 print("🤖 18+ Multi‑Product Bot Started (Coloured start + photo/video/link demo)")
 print("👑 Admin: " + (get_setting('admin_username') or ''))
 bot.run_until_disconnected()
-EOF
-
-echo "✅ Bot updated. Restarting..."
-systemctl restart scraper-bot 2>/dev/null || echo "Restart manually: cd /root/content-bot && python3 content_bot.py"
