@@ -1,12 +1,11 @@
 """
-18+ MULTI-PRODUCT BOT - COLOURED START + VIDEO/PHOTO/LINK DEMO
+18+ MULTI-PRODUCT BOT
 Author: Bread (co-founder of Sonion)
 """
 
 import os
 import re
 import asyncio
-...
 import sqlite3
 import json
 import random
@@ -20,7 +19,7 @@ from telethon.tl.types import MessageMediaPhoto, MessageMediaDocument
 API_ID = 35458756
 API_HASH = 'eac538ffbeb1c5a039a9a9e6ff293149'
 BOT_TOKEN = '8907797579:AAE4qAmqxS4BbFWF_DGceZL5UOkkJmQClIE'
-ADMIN_ID =  8324356832
+ADMIN_ID = int(os.getenv('7579324057', '0'))
 
 DB_FILE = 'content_bot.db'
 
@@ -921,7 +920,7 @@ async def admin_input_handler(event):
                     if hasattr(attr, 'file_name') and attr.file_name:
                         ext = attr.file_name.split('.')[-1] if '.' in attr.file_name else 'file'
                         break
-           file_path = f"demo_{pid}_{datetime.now().strftime('%Y%m%d%H%M%S')}.{ext}"
+            file_path = f"demo_{pid}_{datetime.now().strftime('%Y%m%d%H%M%S')}.{ext}"
             try:
                 await event.download_media(file=file_path)
                 if os.path.exists(file_path):
