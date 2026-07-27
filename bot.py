@@ -19,7 +19,7 @@ from telethon.tl.types import MessageMediaPhoto, MessageMediaDocument
 API_ID = 35458756
 API_HASH = 'eac538ffbeb1c5a039a9a9e6ff293149'
 BOT_TOKEN = '8907797579:AAE4qAmqxS4BbFWF_DGceZL5UOkkJmQClIE'
-ADMIN_ID = int(os.getenv('7579324057', '0'))
+ADMIN_ID = int(os.getenv('ADMIN_ID', '0'))
 
 DB_FILE = 'content_bot.db'
 
