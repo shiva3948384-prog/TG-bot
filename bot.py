@@ -22,7 +22,7 @@ API_HASH = 'eac538ffbeb1c5a039a9a9e6ff293149'
 BOT_TOKEN = '8907797579:AAE4qAmqxS4BbFWF_DGceZL5UOkkJmQClIE'
 ADMIN_ID =  8324356832
 
-DB_FILE = '/root/content-bot/content_bot.db'
+DB_FILE = 'content_bot.db'
 
 DEFAULT_PRODUCTS = {
     'indian_rap': {
@@ -921,7 +921,7 @@ async def admin_input_handler(event):
                     if hasattr(attr, 'file_name') and attr.file_name:
                         ext = attr.file_name.split('.')[-1] if '.' in attr.file_name else 'file'
                         break
-            file_path = f"/root/content-bot/demo_{pid}_{datetime.now().strftime('%Y%m%d%H%M%S')}.{ext}"
+           file_path = f"demo_{pid}_{datetime.now().strftime('%Y%m%d%H%M%S')}.{ext}"
             try:
                 await event.download_media(file=file_path)
                 if os.path.exists(file_path):
@@ -956,7 +956,7 @@ async def admin_input_handler(event):
                     if hasattr(attr, 'file_name') and attr.file_name:
                         ext = attr.file_name.split('.')[-1] if '.' in attr.file_name else 'file'
                         break
-            file_path = f"/root/content-bot/paid_{pid}_{datetime.now().strftime('%Y%m%d%H%M%S')}.{ext}"
+            file_path = f"paid_{pid}_{datetime.now().strftime('%Y%m%d%H%M%S')}.{ext}"
             try:
                 await event.download_media(file=file_path)
                 if os.path.exists(file_path):
@@ -1026,7 +1026,7 @@ async def admin_input_handler(event):
 
     if action == 'awaiting_qr':
         if event.message.media:
-            file_path = f"/root/content-bot/qr_{user_id}.jpg"
+            file_path = f"qr_{user_id}.jpg"
             try:
                 await event.download_media(file=file_path)
                 if os.path.exists(file_path):
@@ -1042,7 +1042,7 @@ async def admin_input_handler(event):
 
     if action == 'awaiting_welcome_photo':
         if event.message.media:
-            file_path = f"/root/content-bot/welcome_{user_id}.jpg"
+            file_path = f"welcome_{user_id}.jpg"
             try:
                 await event.download_media(file=file_path)
                 if os.path.exists(file_path):
