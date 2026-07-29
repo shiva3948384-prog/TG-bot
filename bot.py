@@ -491,7 +491,7 @@ async def callback_handler(event):
     
     if data == 'payment_help':
         upi = get_setting('upi_id') or 'yourupi@upi'
-        admin_user = get_setting('admin_username') or '@SANDYxBIHARI'
+        admin_user = get_setting('admin_username') or '@ITACHIxAURA'
         text = f"""❓ <b>How to Pay?</b> 💰
 
 1️⃣ Select a product from the main menu.
