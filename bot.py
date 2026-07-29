@@ -18,7 +18,7 @@ from telethon.tl.types import MessageMediaPhoto, MessageMediaDocument
 # ==================== CONFIG ====================
 API_ID = 35458756
 API_HASH = 'eac538ffbeb1c5a039a9a9e6ff293149'
-BOT_TOKEN = '8907797579:AAEdN03nIaWOVpPt6-WsKWxizGSmTtHWxI8'
+BOT_TOKEN = '8827598316:AAGhSSyq5GL8AJ6VZrg-7VD2GvALR2Rw47M'
 ADMIN_ID = int(os.getenv('ADMIN_ID', '0'))
 
 DB_FILE = 'content_bot.db'
@@ -97,7 +97,7 @@ def init_db():
     ''')
     c.execute('INSERT OR IGNORE INTO settings (key, value) VALUES ("upi_id", "yourupi@upi")')
     c.execute('INSERT OR IGNORE INTO settings (key, value) VALUES ("qr_photo", NULL)')
-    c.execute('INSERT OR IGNORE INTO settings (key, value) VALUES ("admin_username", "@ITACHIxAURA")')
+    c.execute('INSERT OR IGNORE INTO settings (key, value) VALUES ("admin_username", "@Indo_Seller_31")')
     c.execute('INSERT OR IGNORE INTO settings (key, value) VALUES ("welcome_photo", NULL)')
     conn.commit()
     conn.close()
@@ -288,7 +288,7 @@ async def send_main_menu(chat_id, user_id):
             u = get_user(user_id)
             status += f" <i>({u['product_id']} until {u['expiry'][:10]})</i>"
         
-        admin_user = get_setting('admin_username') or '@ITACHIxAURA'
+        admin_user = get_setting('admin_username') or '@Indo_Seller_31'
         
         text = f"""🔞 <b>Welcome to the 18+ Premium Zone!</b> 🔞
 
@@ -491,7 +491,7 @@ async def callback_handler(event):
     
     if data == 'payment_help':
         upi = get_setting('upi_id') or 'yourupi@upi'
-        admin_user = get_setting('admin_username') or '@ITACHIxAURA'
+        admin_user = get_setting('admin_username') or '@Indo_Seller_31'
         text = f"""❓ <b>How to Pay?</b> 💰
 
 1️⃣ Select a product from the main menu.
