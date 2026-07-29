@@ -97,7 +97,7 @@ def init_db():
     ''')
     c.execute('INSERT OR IGNORE INTO settings (key, value) VALUES ("upi_id", "yourupi@upi")')
     c.execute('INSERT OR IGNORE INTO settings (key, value) VALUES ("qr_photo", NULL)')
-    c.execute('INSERT OR IGNORE INTO settings (key, value) VALUES ("admin_username", "@SANDYxBIHARI")')
+    c.execute('INSERT OR IGNORE INTO settings (key, value) VALUES ("admin_username", "@ITACHIxAURA")')
     c.execute('INSERT OR IGNORE INTO settings (key, value) VALUES ("welcome_photo", NULL)')
     conn.commit()
     conn.close()
@@ -288,7 +288,7 @@ async def send_main_menu(chat_id, user_id):
             u = get_user(user_id)
             status += f" <i>({u['product_id']} until {u['expiry'][:10]})</i>"
         
-        admin_user = get_setting('admin_username') or '@SANDYxBIHARI'
+        admin_user = get_setting('admin_username') or '@ITACHIxAURA'
         
         text = f"""🔞 <b>Welcome to the 18+ Premium Zone!</b> 🔞
 
